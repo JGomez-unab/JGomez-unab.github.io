@@ -6,12 +6,12 @@
   <title>Juan Sebastián Gómez | Universidad Andrés Bello</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=panel-tracking-8">
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="identity" href="index.html"><span class="identity-mark">JG</span><span class="identity-text"><strong>Juan Sebastián Gómez</strong><small>Networked Energy Systems</small></span></a>
+    <a class="identity" href="index.html"><span class="identity-mark">JG</span><span class="identity-text"><strong>Juan Sebastián Gómez</strong><small>Cyberphysical Energy Systems</small></span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" aria-label="Main navigation">
       <a class="active" href="index.html">Home</a><a href="team.html">Team</a><a href="projects.html">Projects</a><a href="code.html">Code</a><a href="publications.html">Publications</a><a href="teaching.html">Teaching</a>
@@ -49,7 +49,39 @@
       <a class="directory-link" href="teaching.html"><span><small>05</small><strong>Teaching</strong></span><p>Courses, supervision, and resources</p><b aria-hidden="true">→</b></a>
     </aside>
   </main>
-  <footer><p>Energy Transformation Center · Faculty of Engineering · Universidad Andrés Bello</p><p>juan.gomez@unab.cl</p><p>Last updated <span id="updated-year"></span></p></footer>
-  <script src="script.js"></script>
+  <footer class="home-footer" id="home-footer">
+    <div class="solar-panels" aria-hidden="true">
+      <svg viewBox="0 0 520 180" preserveAspectRatio="none">
+        <g class="solar-symbol">
+          <circle cx="72" cy="42" r="20"/>
+          <path d="M72 8V16M72 68V76M38 42H46M98 42H106M48 18 54 24M90 60 96 66M96 18 90 24M54 60 48 66"/>
+        </g>
+        <g class="panel-unit panel-one">
+          <g class="panel-face">
+            <rect x="74" y="71" width="112" height="16" rx="3"/>
+            <path d="M102 71V87M130 71V87M158 71V87"/>
+          </g>
+          <path d="M130 79V143M112 157V149Q112 143 118 143H142Q148 143 148 149V157"/>
+        </g>
+        <g class="panel-unit panel-two">
+          <g class="panel-face">
+            <rect x="204" y="71" width="112" height="16" rx="3"/>
+            <path d="M232 71V87M260 71V87M288 71V87"/>
+          </g>
+          <path d="M260 79V143M242 157V149Q242 143 248 143H272Q278 143 278 149V157"/>
+        </g>
+        <g class="panel-unit panel-three">
+          <g class="panel-face">
+            <rect x="334" y="71" width="112" height="16" rx="3"/>
+            <path d="M362 71V87M390 71V87M418 71V87"/>
+          </g>
+          <path d="M390 79V143M372 157V149Q372 143 378 143H402Q408 143 408 149V157"/>
+        </g>
+        <rect class="panel-ground" x="28" y="157" width="464" height="16" rx="3"/>
+      </svg>
+    </div>
+    <p>Energy Transformation Center · Faculty of Engineering · Universidad Andrés Bello</p><p>juan.gomez@unab.cl</p><p>Last updated <span id="updated-year"></span></p>
+  </footer>
+  <script src="script.js?v=panel-tracking-7"></script>
 </body>
 </html>

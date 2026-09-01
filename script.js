@@ -16,3 +16,16 @@ document.querySelectorAll('.bibliography > a, .bibliography > .citation').forEac
   const author=document.createElement('em');author.textContent=`Lead author: ${leadAuthors[id]}`;
   const doi=details.querySelector('small');details.insertBefore(author,doi||null);
 });
+
+const homeFooter=document.querySelector('#home-footer');
+if(homeFooter&&window.matchMedia('(pointer:fine)').matches&&!window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+  window.addEventListener('pointermove',(event)=>{
+    const position=Math.max(0,Math.min(1,event.clientX/window.innerWidth));
+    homeFooter.style.setProperty('--panel-angle',`${-60+(position*120)}deg`);
+    homeFooter.style.setProperty('--sun-shift',`${position*376}px`);
+  });
+  document.documentElement.addEventListener('mouseleave',()=>{
+    homeFooter.style.setProperty('--panel-angle','-42deg');
+    homeFooter.style.setProperty('--sun-shift','0px');
+  });
+}
