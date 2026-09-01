@@ -29,3 +29,28 @@ if(homeFooter&&window.matchMedia('(pointer:fine)').matches&&!window.matchMedia('
     homeFooter.style.setProperty('--sun-shift','0px');
   });
 }
+
+document.querySelectorAll('.student-modal[data-profile]').forEach((studentModal)=>{
+  const profile=studentModal.dataset.profile;
+  document.querySelectorAll(`[data-student-profile="${profile}"]`).forEach((link)=>{
+    link.addEventListener('click',(event)=>{
+      if(typeof studentModal.showModal!=='function')return;
+      event.preventDefault();
+      studentModal.showModal();
+    });
+  });
+  studentModal.querySelector('.student-modal-close')?.addEventListener('click',()=>studentModal.close());
+  studentModal.querySelectorAll('a').forEach((link)=>link.addEventListener('click',()=>studentModal.close()));
+  studentModal.addEventListener('click',(event)=>{
+    if(event.target!==studentModal)return;
+    const bounds=studentModal.getBoundingClientRect();
+    const inside=event.clientX>=bounds.left&&event.clientX<=bounds.right&&event.clientY>=bounds.top&&event.clientY<=bounds.bottom;
+    if(!inside)studentModal.close();
+  });
+});
+
+const requestedProfile=new URLSearchParams(window.location.search).get('profile');
+if(requestedProfile){
+  const requestedModal=document.querySelector(`.student-modal[data-profile="${requestedProfile}"]`);
+  if(requestedModal&&typeof requestedModal.showModal==='function')requestedModal.showModal();
+}
