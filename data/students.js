@@ -202,16 +202,25 @@ window.STUDENT_DATABASE = {
       "level": "undergraduate",
       "role": "Student",
       "photo": null,
-      "summary": "Student researcher in the Cyberphysical Energy Systems group.",
+      "summary": "Distributed predictive control for DC electrical grids.",
       "profile": {
-        "program": null,
+        "program": "Robotics and Automation Engineering",
         "institution": "Universidad Andrés Bello",
-        "researchAreas": [],
+        "researchAreas": ["Distributed predictive control", "DC electrical grids"],
         "supervisor": "Juan Sebastián Gómez Quintero"
       },
       "projects": [],
       "publications": [],
-      "inDevelopment": []
+      "inDevelopment": [],
+      "supervision": [
+        {
+          "year": 2026,
+          "role": "Guide",
+          "title": "Distributed model predictive control based on voltage and power models for DC electrical grids",
+          "degree": "Graduation work — Robotics and Automation Engineering",
+          "institution": "Universidad Andrés Bello"
+        }
+      ]
     },
     {
       "id": "ariel",
@@ -374,7 +383,7 @@ window.STUDENT_DATABASE = {
     },
     {
       "id": "n-jara",
-      "name": "N. Jara",
+      "name": "Natalia Jara",
       "status": "former",
       "level": "undergraduate",
       "role": "Former student",
@@ -399,7 +408,7 @@ window.STUDENT_DATABASE = {
     },
     {
       "id": "g-fuentes",
-      "name": "G. Fuentes",
+      "name": "Gabriel Fuentes",
       "status": "former",
       "level": "undergraduate",
       "role": "Former student",
@@ -424,7 +433,7 @@ window.STUDENT_DATABASE = {
     },
     {
       "id": "c-correa",
-      "name": "C. Correa",
+      "name": "Cesar Correa",
       "status": "former",
       "level": "postgraduate",
       "role": "Former master’s student",
@@ -456,7 +465,7 @@ window.STUDENT_DATABASE = {
     },
     {
       "id": "s-intriago",
-      "name": "S. Intriago",
+      "name": "Sofía Intriago",
       "status": "former",
       "level": "undergraduate",
       "role": "Former student",
@@ -481,7 +490,7 @@ window.STUDENT_DATABASE = {
     },
     {
       "id": "p-robayo",
-      "name": "P. Robayo",
+      "name": "Paula Robayo",
       "status": "former",
       "level": "undergraduate",
       "role": "Former student",
