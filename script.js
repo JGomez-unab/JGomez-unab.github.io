@@ -49,6 +49,18 @@ document.querySelectorAll('.student-modal[data-profile]').forEach((studentModal)
   });
 });
 
+document.querySelectorAll('[data-dialog-target]').forEach((trigger)=>{
+  trigger.addEventListener('click',(event)=>{event.preventDefault();document.getElementById(trigger.dataset.dialogTarget)?.showModal()});
+});
+document.querySelectorAll('.publication-modal').forEach((publicationModal)=>{
+  publicationModal.querySelector('.publication-modal-close')?.addEventListener('click',()=>publicationModal.close());
+  publicationModal.addEventListener('click',(event)=>{
+    const box=publicationModal.getBoundingClientRect();
+    const inside=event.clientX>=box.left&&event.clientX<=box.right&&event.clientY>=box.top&&event.clientY<=box.bottom;
+    if(!inside) publicationModal.close();
+  });
+});
+
 const requestedProfile=new URLSearchParams(window.location.search).get('profile');
 if(requestedProfile){
   const requestedModal=document.querySelector(`.student-modal[data-profile="${requestedProfile}"]`);

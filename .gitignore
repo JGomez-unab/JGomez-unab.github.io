@@ -2,3 +2,5 @@
 .DS_Store
 Thumbs.db
 .publish/
+_cv_source/
+__pycache__/

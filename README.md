@@ -1,6 +1,6 @@
 # Academic Research Website Template
 
-A lightweight, responsive academic website for Juan Sebastián Gómez and affiliated research groups. It is designed for GitHub Pages and uses plain HTML, CSS, and JavaScript—no build step required.
+A lightweight, responsive academic website for Juan Sebastián Gómez Quintero and affiliated research groups. It is designed for GitHub Pages and uses plain HTML, CSS, and JavaScript—no build step required.
 
 ## Customize the content
 
@@ -9,6 +9,7 @@ Most recurring content lives in `data.js`:
 - `profiles`: replace the placeholder GitHub and Google Scholar URLs.
 - `projects`: add repository URLs, descriptions, and tags.
 - `publications`: add selected papers and DOI links.
+- `publications.html` and `downloads/Juan-Sebastian-Gomez-Quintero-CV.pdf` are generated from the private `CV-Jgomez` repository by `.github/workflows/sync-cv.yml`.
 - `people`: link the laboratory and student GitHub accounts.
 - Student cards intentionally contain editable placeholder names. Replace them before publication.
 
