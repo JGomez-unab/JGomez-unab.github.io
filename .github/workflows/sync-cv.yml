@@ -34,6 +34,7 @@ jobs:
           root_file: isso.tex
           working_directory: _cv_source
           texlive_version: 2020
+          os: debian
           latexmk_use_xelatex: true
 
       - name: Generate publications page
