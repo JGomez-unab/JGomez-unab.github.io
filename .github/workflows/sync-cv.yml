@@ -28,29 +28,15 @@ jobs:
           path: _cv_source
           persist-credentials: false
 
-      - name: Compile CV with XeLaTeX
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: isso.tex
-          working_directory: _cv_source
-          texlive_version: 2020
-          os: debian
-          latexmk_use_xelatex: true
-
       - name: Generate publications page
         run: |
           python -m pip install --disable-pip-version-check bibtexparser==1.4.3
           python scripts/sync_cv.py --bib _cv_source/sample.bib --output publications.html
 
-      - name: Publish CV PDF
-        run: |
-          mkdir -p downloads
-          cp _cv_source/isso.pdf downloads/Juan-Sebastian-Gomez-Quintero-CV.pdf
-
       - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add publications.html downloads/Juan-Sebastian-Gomez-Quintero-CV.pdf
+          git add publications.html
           git diff --cached --quiet || git commit -m "Update CV and publications"
           git push

@@ -9,7 +9,8 @@ Most recurring content lives in `data.js`:
 - `profiles`: replace the placeholder GitHub and Google Scholar URLs.
 - `projects`: add repository URLs, descriptions, and tags.
 - `publications`: add selected papers and DOI links.
-- `publications.html` and `downloads/Juan-Sebastian-Gomez-Quintero-CV.pdf` are generated from the private `CV-Jgomez` repository by `.github/workflows/sync-cv.yml`.
+- `publications.html` is generated from the private `CV-Jgomez` repository by `.github/workflows/sync-cv.yml`. The downloadable CV is stored at `CV_pdf/CV_Jgomez.pdf`.
+- `data/students.js` is the structured source for current and former student profiles. `team.html` builds its student cards, alumni list, and profile dialogs from this file, including when opened directly without a local server. `previousEducation` is included only for postgraduate students.
 - `people`: link the laboratory and student GitHub accounts.
 - Student cards intentionally contain editable placeholder names. Replace them before publication.
 
