@@ -35,8 +35,8 @@ jobs:
 
           sidebar = Path("_cv_source/page4sidebar.tex")
           content = sidebar.read_text(encoding="utf-8")
-          content = content.replace(r"\begin{itemize}", r"\begin{flushleft}\small", 1)
-          content = content.replace(r"\end{itemize}", r"\end{flushleft}", 1)
+          content = content.replace(r"\begin{itemize}", r"\small", 1)
+          content = content.replace(r"\end{itemize}", "", 1)
           content = content.replace(r"\item ", "\n" + r"\par\noindent ")
           sidebar.write_text(content, encoding="utf-8")
 
