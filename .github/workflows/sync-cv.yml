@@ -28,23 +28,12 @@ jobs:
           path: _cv_source
           persist-credentials: false
 
-      - name: Apply AltaCV compatibility adjustment
-        shell: python
-        run: |
-          from pathlib import Path
-
-          sidebar = Path("_cv_source/page4sidebar.tex")
-          content = sidebar.read_text(encoding="utf-8")
-          content = content.replace(r"\begin{itemize}", r"\small", 1)
-          content = content.replace(r"\end{itemize}", "", 1)
-          content = content.replace(r"\item ", "\n" + r"\par\noindent ")
-          sidebar.write_text(content, encoding="utf-8")
-
       - name: Compile CV with XeLaTeX
         uses: xu-cheng/latex-action@v4
         with:
           root_file: isso.tex
           working_directory: _cv_source
+          texlive_version: 2016
           latexmk_use_xelatex: true
 
       - name: Generate publications page
