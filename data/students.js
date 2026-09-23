@@ -19,7 +19,7 @@ window.STUDENT_DATABASE = {
         "degree": "Robotics and Automation Engineer",
         "year": 2025,
         "institution": "Universidad Andrés Bello",
-        "distinction": "Summa cum laude",
+        "distinction": "Magna Cum Laude",
         "thesisAdvisor": "Juan Sebastián Gómez Quintero"
       },
       "projects": [
@@ -86,9 +86,9 @@ window.STUDENT_DATABASE = {
         "supervisor": "Juan Sebastián Gómez Quintero"
       },
       "previousEducation": {
-        "degree": null,
-        "year": null,
-        "institution": null,
+        "degree": "Master in Energy and Sustainability",
+        "year": "2025",
+        "institution": "Pontificia Universidad Javeriana-Bogotá",
         "distinction": null,
         "thesisAdvisor": null
       },
@@ -100,20 +100,22 @@ window.STUDENT_DATABASE = {
           "url": "projects.html#agrivoltaic-anillo"
         }
       ],
-      "publications": [],
+      "publications": [
+        {
+          "key": "Sosa2026",
+          "label": "J18",
+          "year": 2026,
+          "title": "Transactive Microgrid with Distributed Energy Resources Based on Blockchain Technology",
+          "authors": "D. Sosa, L. G. Marín, J. L. Uribe, O. Cartagena, A. Navas-Fonseca, J. S. Gómez, C. Burgos-Mellado, H. K. Morales Paredes, L. De Oro Arenas, J. C. Cebrian, A. Llor, and J. Vuelvas",
+          "url": "publications.html#publication-sosa2026-transactive"
+        }
+      ],
       "inDevelopment": [
         {
           "status": "Work in progress",
           "venue": null,
           "title": "Integration of Energy Management Systems (EMS) for Agrivoltaic Farming and Desalination Applications: Review",
           "authors": "D. Sosa, B. Castro, C. Carrasco, and J. S. Gómez"
-        },
-        {
-          "status": "Submitted",
-          "venue": "Sustainable Energy, Grids and Networks",
-          "year": 2025,
-          "title": "Transactive Microgrid with Distributed Energy Resources Based on Blockchain Technology",
-          "authors": "D. Sosa, L. G. Marín, J. L. Uribe, A. Navas, O. Cartagena, J. S. Gómez, J. Vuelvas, and A. Llor"
         }
       ]
     },
@@ -165,7 +167,7 @@ window.STUDENT_DATABASE = {
       "status": "current",
       "level": "undergraduate",
       "role": "Student",
-      "photo": null,
+      "photo": "photos/AStewart.png",
       "summary": "Student researcher in the Cyberphysical Energy Systems group.",
       "profile": {
         "program": null,
@@ -183,7 +185,7 @@ window.STUDENT_DATABASE = {
       "status": "current",
       "level": "undergraduate",
       "role": "Student",
-      "photo": null,
+      "photo": "photos/MMunoz.png",
       "summary": "Student researcher in the Cyberphysical Energy Systems group.",
       "profile": {
         "program": null,
@@ -201,7 +203,7 @@ window.STUDENT_DATABASE = {
       "status": "current",
       "level": "undergraduate",
       "role": "Student",
-      "photo": null,
+      "photo": "photos/NMiranda.png",
       "summary": "Distributed predictive control for DC electrical grids.",
       "profile": {
         "program": "Robotics and Automation Engineering",
@@ -228,7 +230,7 @@ window.STUDENT_DATABASE = {
       "status": "current",
       "level": "undergraduate",
       "role": "Student",
-      "photo": null,
+      "photo": "photos/ACastillo.png",
       "summary": "Student researcher in the Cyberphysical Energy Systems group.",
       "profile": {
         "program": null,
